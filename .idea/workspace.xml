@@ -5,29 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/01_preparation-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/02_modeling-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/03_submission-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01_preparation.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02_KNN_Optuna.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02_LogReg_Optuna.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02_RF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02_modeling.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03_RF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03_submission.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03_submission.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03_submission_2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OptunaCVS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RF_Optuna_model.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/X_test_prepared.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive_02_modeling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roc_auc_scores.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_Ids.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unused code.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_XGB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycaret.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_pycaret.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train_prepared.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_RF.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_RF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roc_auc_scores.csv" beforeDir="false" afterPath="$PROJECT_DIR$/roc_auc_scores.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -13,7 +13,7 @@ SEED = 123
 # In Terminal: pip install optuna
 import optuna
 
-model_name = 'RF_Optuna_04'
+model_name = 'RF_Optuna_03'
 from sklearn.ensemble import RandomForestClassifier
 
 model = RandomForestClassifier(random_state=SEED, \
@@ -42,7 +42,7 @@ param_distributions = {
 
 optuna_search = optuna.integration.OptunaSearchCV(model, param_distributions, \
                                                   scoring='roc_auc', \
-                                                  timeout = 3600, \
+                                                  timeout = 120, \
                                                   n_trials = None, \
                                                   #max_iter = 1200, \
                                                   random_state = SEED, \

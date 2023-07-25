@@ -1,7 +1,7 @@
 # Spaceship
  Predict which passengers are transported to an alternate dimension.
 
-This an example of data preprocessing, dimentionality reduction and binary classification with different models and hyperparameters tuning.
+This an example of data preprocessing, dimensionality reduction and binary classification with different models and hyperparameters tuning.
 
 The process is described in the following Jupiter notebooks:
 

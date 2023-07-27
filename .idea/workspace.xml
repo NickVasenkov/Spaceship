@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/04_XGB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/04_newstart-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_newstart.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plan.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_RF.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_RF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roc_auc_scores.csv" beforeDir="false" afterPath="$PROJECT_DIR$/roc_auc_scores.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/01_preparation-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/01_preparation-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/03_submission-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/03_submission-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_preparation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/01_preparation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_KNN_Optuna.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_KNN_Optuna.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_LogReg_Optuna.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_LogReg_Optuna.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_submission.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/03_submission.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_XGB.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_XGB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OptunaCVS.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_CVS.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

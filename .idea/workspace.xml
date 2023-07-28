@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/unused code-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/04_RF.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/05.-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_scores_df.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_test_prepared.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05..ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05_hyperparameters.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/04_newstart-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/04_newstart-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01_preparation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/01_preparation.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04_newstart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/04_newstart.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/X_test_prepared.csv" beforeDir="false" afterPath="$PROJECT_DIR$/X_test_prepared.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_prepared.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train_prepared.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unused code.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/unused code.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roc_auc_scores.csv" beforeDir="false" afterPath="$PROJECT_DIR$/roc_auc_scores.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

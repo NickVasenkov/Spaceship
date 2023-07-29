@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/04_newstart-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/04_newstart-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/05.-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_newstart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/04_newstart.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05..ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/05_hyperparameters.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/05_hyperparameters.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roc_auc_scores.csv" beforeDir="false" afterPath="$PROJECT_DIR$/roc_auc_scores.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_Ids.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test_Ids.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

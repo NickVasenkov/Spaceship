@@ -3,6 +3,6 @@
 
 This an example of data preprocessing, dimensionality reduction and binary classification with different models and hyperparameters tuning.
 
-The current best approach start here:
+My current best approach starts here:
 
 https://github.com/NickVasenkov/Spaceship/blob/main/04_newstart.ipynb

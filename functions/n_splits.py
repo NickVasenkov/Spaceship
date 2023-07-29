@@ -11,8 +11,6 @@ SEED = global_variables.loc[0, 'SEED']
 
 
 import xgboost as xgb
-# Create the DMatrix
-dmatrix = xgb.DMatrix(train.drop(['Transported'], axis=1), label=train['Transported'])
 
 # Instantiate the regressor
 model = xgb.XGBClassifier(random_state=SEED, n_jobs=-1)
@@ -32,7 +30,7 @@ for random_state in random_states:
         index = len(tradeoff)
         tradeoff.loc[index, 'random_state'] = random_state
         tradeoff.loc[index, 'n_splits'] = n_splits
-        train_score, cross_score, cross_scores_std, subm = get_score(train, test, model, scores_df,
+        train_score, cross_score, cross_scores_std, subm = get_score(global_variables, train, test, model, scores_df,
                                                                      update=False,
                                                                      prepare_submission=False,
                                                                      n_splits=n_splits,

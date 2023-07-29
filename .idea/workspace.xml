@@ -5,19 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/functions/.ipynb_checkpoints/initialize_studies-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/initialize_studies.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studies/.ipynb_checkpoints/test-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studies/test.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studies/test.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/submissions/submission_00.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/submissions/submission_01.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/Untitled.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/global_variables.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/target_encoding.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_03.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_03.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/02.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/02_seconds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/03.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/03_seconds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_03.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spaceship.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/get_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/get_score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/initialize_studies.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/functions/initialize_studies.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/n_splits.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/n_splits.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scores_df.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submission_00.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/.ipynb_checkpoints/test-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/studies/.ipynb_checkpoints/test-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/studies/test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/test.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/test.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/test_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/test_seconds.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,18 +48,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mikej/My Drive/5/Kaggle/Spaceship&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/mikej/My Drive/5/Kaggle/Spaceship/studies",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mikej\My Drive\5\Kaggle\Spaceship\studies" />
       <recent name="C:\Users\mikej\My Drive\5\Kaggle\Spaceship" />
     </key>
   </component>

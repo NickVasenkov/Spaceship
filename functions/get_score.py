@@ -1,4 +1,4 @@
-def get_score(train, test, model, scores_df,
+def get_score(global_variables, train, test=None, model=None, scores_df=None,
               update=True, comment='',
               prepare_submission=True,
               n_splits=3, global_n_splits=True,
@@ -8,10 +8,11 @@ def get_score(train, test, model, scores_df,
     import numpy as np
     import pandas as pd
     '''
-    This function takes processed train and test sets, as well as an estimator for cross validation and
-    a number of cross-validation splits.
-    
-    It also takes the scores dataframe.
+    This function takes the global variables DataFrame, 
+    the processed train and test sets,
+    an estimator for cross validation,
+    a number of cross-validation splits and
+    the scores dataframe.
     
     If 'update' is True, then the scores dataframe is being updated eith new scores and 'comment'.
     
@@ -29,8 +30,6 @@ def get_score(train, test, model, scores_df,
         
     (Score is described in Spaceship.ipynb -> 00. Baseline)
     '''
-
-    global_variables = pd.read_csv('../global_variables.csv', index_col=0)
 
     # Import global n_splits
     if global_n_splits:

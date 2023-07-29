@@ -3,8 +3,6 @@
 
 This an example of data preprocessing, dimensionality reduction and binary classification with different models and hyperparameters tuning.
 
-The process is described in the following Jupiter notebooks:
+The current best approach start here:
 
-https://github.com/NickVasenkov/Spaceship/blob/main/01_preparation.ipynb
-https://github.com/NickVasenkov/Spaceship/blob/main/02_modeling.ipynb
-https://github.com/NickVasenkov/Spaceship/blob/main/03_submission.ipynb
+https://github.com/NickVasenkov/Spaceship/blob/main/04_newstart.ipynb

@@ -2,3 +2,9 @@ https://app.datacamp.com/workspace/w/320ae245-0e58-49dc-a4ef-fa7dcccb3206/edit
 https://app.datacamp.com/workspace/w/0a9b2495-83c2-41cc-8783-b9166b91977f/edit
 
 
+
+change random state for putting scores in table
+
+do mean of two random states in each step
+
+try hyperparameters tuning without random state

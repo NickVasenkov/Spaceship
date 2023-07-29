@@ -1,5 +1,5 @@
 def get_score(train, test, model, scores_df,
-              update=True, comment = '',
+              update=True, comment='',
               prepare_submission=True,
               n_splits=3, global_n_splits=True,
               random_state=123, global_random_state=True):
@@ -74,7 +74,7 @@ def get_score(train, test, model, scores_df,
         # Prepare the submission DataFrame
         test_Ids = pd.read_csv('test_Ids.csv', index_col=0).reset_index(drop=True)
         test_pred = model.predict(test)
-        test_pred = ["True" if i == 1 else "False" for i in test_pred]
+        test_pred = [True if i == 1 else False for i in test_pred]
         test_pred = pd.DataFrame(test_pred, columns=['Transported'])
         submission = pd.concat([test_Ids, test_pred], axis=1)
 

@@ -5,21 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/archive/X_test_prepared.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/unused code.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/n_splits.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global_variables.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_datasets/test_01.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_datasets/train_01.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scores_df.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/.ipynb_checkpoints/initialize_studies-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/initialize_studies.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/.ipynb_checkpoints/test-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/test.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/test.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_00.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_01.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters_2-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters_2-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_hyperparameters_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/05_hyperparameters_2.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spaceship.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/X_test_prepared.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/get_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/get_score.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unused code.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scores_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scores_df.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submission_00.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

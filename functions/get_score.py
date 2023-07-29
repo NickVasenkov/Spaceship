@@ -1,23 +1,46 @@
-def get_score(train, test, model, n_splits):
+def get_score(train, test, model, scores_df,
+              update=True, comment = '',
+              prepare_submission=True,
+              n_splits=3, global_n_splits=True,
+              random_state=123, global_random_state=True):
     from sklearn.model_selection import StratifiedKFold
     from sklearn.metrics import roc_auc_score
     import numpy as np
     import pandas as pd
     '''
-    This function takes train and test sets, as well as a model for cross validation and
+    This function takes processed train and test sets, as well as an estimator for cross validation and
     a number of cross-validation splits.
+    
+    It also takes the scores dataframe.
+    
+    If 'update' is True, then the scores dataframe is being updated eith new scores and 'comment'.
+    
+    If 'prepare_submission' is True, a submission DataFrame is returned
+    
+    'n_splits' can be chosen for StratifiedKFold In this case,'global_n_splits' has to be set to False
+    
+    'random_state' can be chosen for StratifiedKFold In this case,'global_random_state' has to be set to False
 
     It returns:
         1) Average training Score.
         2) Average cross-validation Score
+        3) Standard Deviation of cross-validation scores
+        4) A submission DataFrame (if 'prepare_submission' is True)
+        
+    (Score is described in Spaceship.ipynb -> 00. Baseline)
     '''
 
-    seed_file = pd.read_csv('seed.csv', index_col=0)
-    SEED = seed_file.iloc[0, 0]
+    global_variables = pd.read_csv('../global_variables.csv', index_col=0)
 
-    # Import random state number
-    # Create a StratifiedKFold object (n_splits splits with equal proportion of positive target values)
-    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=SEED)
+    # Import global n_splits
+    if global_n_splits:
+        n_splits = global_variables.loc[0, 'N_SPLITS']
+    # Import a global random state number
+    if global_random_state:
+        random_state = global_variables.loc[0, 'SEED']
+
+    # Create a StratifiedKFold object ('n_splits' splits with equal proportion of positive target values)
+    skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
 
     # Empty lists for collecting scores
     train_scores = []
@@ -37,4 +60,22 @@ def get_score(train, test, model, n_splits):
         cv_pred_proba = model.predict_proba(cv_test.drop('Transported', axis=1))[:, 1]
         cv_scores.append(roc_auc_score(cv_test['Transported'], cv_pred_proba))
 
-    return np.mean(train_scores) - np.std(train_scores), np.mean(cv_scores) - np.std(cv_scores), np.std(cv_scores)
+    # Calculate Scores
+    train_score = np.mean(train_scores) - np.std(train_scores)
+    cross_score = np.mean(cv_scores) - np.std(cv_scores)
+
+    # Update the scores DataFrame
+    if update:
+        scores_df.loc[len(scores_df)] = [comment, train_score, cross_score, np.nan]
+
+    submission = "prepare_submission=False"
+
+    if prepare_submission:
+        # Prepare the submission DataFrame
+        test_Ids = pd.read_csv('test_Ids.csv', index_col=0).reset_index(drop=True)
+        test_pred = model.predict(test)
+        test_pred = ["True" if i == 1 else "False" for i in test_pred]
+        test_pred = pd.DataFrame(test_pred, columns=['Transported'])
+        submission = pd.concat([test_Ids, test_pred], axis=1)
+
+    return train_score, cross_score, np.std(cv_scores), submission

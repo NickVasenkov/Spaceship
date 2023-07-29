@@ -5,34 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/archive/03_CVS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/03_LogReg_Optuna.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/03_XGB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/04_RF.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/05_testing.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/RF_Optuna_model.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/archive_02_modeling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archive/roc_auc_scores.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/get_score.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seed.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/submission_00.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_size.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archive/X_test_prepared.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/archive/unused code.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/n_splits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global_variables.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_01.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_01.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scores_df.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters_2-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/05_hyperparameters_2-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_CVS.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_LogReg_Optuna.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_XGB.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_RF.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_RF.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/05_RF.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/05_hyperparameters_2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/05_hyperparameters_2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_submission_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/05_submission_13.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_testing.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/05_total_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/05_total_seconds.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RF_Optuna_model.pickle" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Spaceship.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive_02_modeling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/roc_auc_scores.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/X_test_prepared.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/get_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions/get_score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unused code.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

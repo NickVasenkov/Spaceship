@@ -2,7 +2,7 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 10
+MINUTES = 2
 SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
@@ -11,7 +11,7 @@ N_TRIALS = 10000
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
 # CHOOSE THE STUDY
-STUDY_NAME = '11'
+STUDY_NAME = '12'
 
 # Import packages
 import joblib
@@ -24,8 +24,6 @@ train = pd.read_csv('../new_datasets/train_07.csv', index_col=0)
 
 # CHOOSE THE NUMBER OF PROCESSORS (will be multiplied by 2)
 N_JOBS = 2
-
-features_n = len(train.columns) - 1
 
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
@@ -41,17 +39,15 @@ SEED = global_variables.loc[0, 'SEED']
 # The function to maximize
 def train_evaluate(params):
 
-
-    # LOAD PREVIOUS BEST PARAMETERS
-    best_params_from_10 = {'criterion': 'log_loss', 'max_depth': 44, 'max_features': 6, 'max_leaf_nodes': 443, 'min_impurity_decrease': 1.0589275371663915e-09, 'min_samples_leaf': 3, 'ccp_alpha': 0.0010619054629917488, 'max_samples': 0.9846315931336822}
-
     # Instantiate the classifier
-    from sklearn.ensemble import RandomForestClassifier
-    model = RandomForestClassifier(random_state=SEED,
+    from sklearn.linear_model import LogisticRegression
+
+    model = LogisticRegression(random_state=SEED,
                                    n_jobs=N_JOBS,
-                                   **best_params_from_10
-                                   )
-    model.set_params(**params)
+                               max_iter =500,
+                               **params
+                               )
+
 
     # Calculate the cross-validation Score
     from functions.get_score import get_score
@@ -64,8 +60,8 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        'n_estimators': trial.suggest_int('n_estimators', 100, 500, step=50),
-        'criterion': trial.suggest_categorical('criterion', ['log_loss', 'gini', 'entropy']),
+        "C": trial.suggest_float('C', 1e-10, 1e10, log=True),
+        'solver': trial.suggest_categorical('solver', ['liblinear', 'newton-cholesky', 'sag', 'lbfgs']),
 
     }
     return train_evaluate(params)

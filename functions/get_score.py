@@ -70,6 +70,8 @@ def get_score(global_variables, train, test=None, model=None, scores_df=None,
     submission = "prepare_submission=False"
 
     if prepare_submission:
+        # Fit the model to the whole training set:
+        model.fit(train.drop('Transported', axis=1), train['Transported'])
         # Prepare the submission DataFrame
         test_Ids = pd.read_csv('test_Ids.csv', index_col=0).reset_index(drop=True)
         test_pred = model.predict(test)

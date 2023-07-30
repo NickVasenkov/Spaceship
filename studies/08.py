@@ -65,7 +65,7 @@ def objective(trial):
         # We may use 'exact' method for the best params (it is slow),
         'gamma': trial.suggest_float('gamma', 1e-2, 1e2, log=True),
         'min_child_weight': trial.suggest_float('min_child_weight', 1e-2, 1e2, log=True),
-        'subsample': trial.suggest_float('subsample', 0.7, 1.00, step=0.05),
+        'subsample': trial.suggest_float('subsample', 0.5, 1.00, step=0.05),
         'colsample_bytree': trial.suggest_float('colsample_bytree', 0.7, 1.00, step=0.05)
         # 'num_parallel_tree': optuna.distributions.IntDistribution(1, 5)
 

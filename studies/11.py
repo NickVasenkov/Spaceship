@@ -2,7 +2,7 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 5
+MINUTES = 1
 SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
@@ -11,7 +11,7 @@ N_TRIALS = 10000
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
 # CHOOSE THE STUDY
-STUDY_NAME = '10'
+STUDY_NAME = '11'
 
 # Import packages
 import joblib
@@ -42,13 +42,16 @@ SEED = global_variables.loc[0, 'SEED']
 def train_evaluate(params):
 
 
+    # LOAD PREVIOUS BEST PARAMETERS
+    best_params_from_10 = {'criterion': 'log_loss', 'max_depth': 44, 'max_features': 6, 'max_leaf_nodes': 443, 'min_impurity_decrease': 1.0589275371663915e-09, 'min_samples_leaf': 3, 'ccp_alpha': 0.0010619054629917488, 'max_samples': 0.9846315931336822}
+
     # Instantiate the classifier
     from sklearn.ensemble import RandomForestClassifier
     model = RandomForestClassifier(random_state=SEED,
-                                   n_estimators=90,
                                    n_jobs=N_JOBS,
-                                   **params
+                                   **best_params_from_10
                                    )
+    model.set_params(**params)
 
     # Calculate the cross-validation Score
     from functions.get_score import get_score
@@ -61,16 +64,8 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        # 'n_estimators': optuna.distributions.IntDistribution(100, 1000),
-        # 'criterion': optuna.distributions.CategoricalDistribution(['log_loss', 'entropy']),
-        'criterion': trial.suggest_categorical('criterion', ['log_loss', 'gini']),
-        'max_depth': trial.suggest_int('max_depth', 2, 70),
-        'max_features': trial.suggest_int('max_features', 1, features_n),
-        'max_leaf_nodes': trial.suggest_int('max_leaf_nodes', 20, 500),
-        "min_impurity_decrease": trial.suggest_float("min_impurity_decrease", 1e-9, 1e-1, log=True),
-        'min_samples_leaf': trial.suggest_int('min_samples_leaf', 2, 30),
-        'ccp_alpha': trial.suggest_float('ccp_alpha', 1e-7, 4e-1, log=True),
-        'max_samples': trial.suggest_float('max_samples', 0.3, 1)
+        'n_estimators': trial.suggest_int('n_estimators', 100, 500, step=50),
+        'criterion': trial.suggest_categorical('criterion', ['log_loss', 'gini', 'entropy']),
 
     }
     return train_evaluate(params)

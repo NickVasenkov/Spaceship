@@ -2,8 +2,8 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 5
-SECONDS = 0
+MINUTES = 0
+SECONDS = 5
 
 ## CHOOSE NUMBER OF TRIALS:
 N_TRIALS = 10000
@@ -11,7 +11,7 @@ N_TRIALS = 10000
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
 # CHOOSE THE STUDY
-STUDY_NAME = '08'
+STUDY_NAME = '10'
 
 # Import packages
 import joblib
@@ -23,7 +23,9 @@ import pandas as pd
 train = pd.read_csv('../new_datasets/train_07.csv', index_col=0)
 
 # CHOOSE THE NUMBER OF PROCESSORS (will be multiplied by 2)
-N_JOBS = 2
+N_JOBS = -1
+
+feutures_n = len(train.columns) - 1
 
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
@@ -39,10 +41,14 @@ SEED = global_variables.loc[0, 'SEED']
 # The function to maximize
 def train_evaluate(params):
 
-    import xgboost as xgb
 
     # Instantiate the classifier
-    model = xgb.XGBClassifier(random_state=SEED, n_jobs=N_JOBS, **params)
+    from sklearn.ensemble import RandomForestClassifier
+    model = RandomForestClassifier(random_state=SEED,
+                                   n_estimators=90,
+                                   n_jobs=N_JOBS,
+                                   **params
+                                   )
 
     # Calculate the cross-validation Score
     from functions.get_score import get_score
@@ -55,19 +61,16 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        # 'n_estimators': trial.suggest_int(40, 100, step=20),
+        # 'n_estimators': optuna.distributions.IntDistribution(100, 1000),
+        # 'criterion': optuna.distributions.CategoricalDistribution(['log_loss', 'entropy']),
+        'criterion': trial.suggest_categorical('criterion', ['log_loss', 'gini']),
         'max_depth': trial.suggest_int('max_depth', 2, 50),
-        'max_leaves': trial.suggest_int('max_leaves', 20, 500),
-        'grow_policy': trial.suggest_categorical('grow_policy', ['depthwise', 'lossguide']),
-        'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.2, step=0.01),
-        'booster': trial.suggest_categorical('booster', ['gbtree', 'dart']),
-        'tree_method': trial.suggest_categorical('tree_method', ['approx', 'hist']),
-        # We may use 'exact' method for the best params (it is slow),
-        'gamma': trial.suggest_float('gamma', 1e-2, 1e2, log=True),
-        'min_child_weight': trial.suggest_float('min_child_weight', 1e-2, 1e2, log=True),
-        'subsample': trial.suggest_float('subsample', 0.7, 1.00, step=0.05),
-        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.7, 1.00, step=0.05)
-        # 'num_parallel_tree': optuna.distributions.IntDistribution(1, 5)
+        'max_features': trial.suggest_int('max_features', 1, feutures_n),
+        'max_leaf_nodes': trial.suggest_int('max_leaf_nodes', 20, 500),
+        "min_impurity_decrease": trial.suggest_float("min_impurity_decrease", 1e-9, 1e-1, log=True),
+        'min_samples_leaf': trial.suggest_int('min_samples_leaf', 2, 30),
+        'ccp_alpha': trial.suggest_float('ccp_alpha', 1e-7, 4e-1, log=True),
+        'max_samples': trial.suggest_float('max_samples', 0.3, 1)
 
     }
     return train_evaluate(params)

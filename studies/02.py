@@ -48,8 +48,6 @@ def train_evaluate(params):
     train = pd.concat([train, train_full['Transported']], axis=1)
     print(train.head())
 
-    # UNCOMMENT TO INSTALL XGBOOST
-    # !pip install xgboost
     import xgboost as xgb
 
     # Instantiate the classifier
@@ -90,7 +88,7 @@ joblib.dump(study, "{}.pkl".format(STUDY_NAME))
 total_seconds.to_csv('{}_seconds.csv'.format(STUDY_NAME))
 
 print("Best trial:", study.best_trial.number)
-print("Best average cross-validation ROC AUC:", study.best_trial.value)
+print("Best average cross-validation Score:", study.best_trial.value)
 print("Best hyperparameters:", study.best_params)
 total_hours = round(total_seconds.iloc[0, 0] / 3600, 3)
 print("Total running time (hours):", total_hours)

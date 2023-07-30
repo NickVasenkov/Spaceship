@@ -2,16 +2,16 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 5
+MINUTES = 2
 SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
-N_TRIALS = 10000
+N_TRIALS = 100
 
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
 # CHOOSE THE STUDY
-STUDY_NAME = '08'
+STUDY_NAME = '09'
 
 # Import packages
 import joblib
@@ -23,7 +23,7 @@ import pandas as pd
 train = pd.read_csv('../new_datasets/train_07.csv', index_col=0)
 
 # CHOOSE THE NUMBER OF PROCESSORS (will be multiplied by 2)
-N_JOBS = 2
+N_JOBS = -1
 
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
@@ -41,8 +41,13 @@ def train_evaluate(params):
 
     import xgboost as xgb
 
+    # LOAD PREVIOUS BEST PARAMETERS
+    best_params_from_08 =  {'max_depth': 40, 'max_leaves': 82, 'grow_policy': 'lossguide', 'learning_rate': 0.08, 'booster': 'gbtree', 'tree_method': 'hist', 'gamma': 4.576721508009145, 'min_child_weight': 0.3292183344037119, 'subsample': 0.7, 'colsample_bytree': 0.85}
+
     # Instantiate the classifier
-    model = xgb.XGBClassifier(random_state=SEED, n_jobs=N_JOBS, **params)
+    model = xgb.XGBClassifier(random_state=SEED, n_jobs=N_JOBS, **best_params_from_08)
+
+    model.set_params(**params)
 
     # Calculate the cross-validation Score
     from functions.get_score import get_score
@@ -55,19 +60,8 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        # 'n_estimators': trial.suggest_int(40, 100, step=20),
-        'max_depth': trial.suggest_int('max_depth', 2, 50),
-        'max_leaves': trial.suggest_int('max_leaves', 20, 500),
-        'grow_policy': trial.suggest_categorical('grow_policy', ['depthwise', 'lossguide']),
-        'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.2, step=0.01),
-        'booster': trial.suggest_categorical('booster', ['gbtree', 'dart']),
-        'tree_method': trial.suggest_categorical('tree_method', ['approx', 'hist']),
-        # We may use 'exact' method for the best params (it is slow),
-        'gamma': trial.suggest_float('gamma', 1e-2, 1e2, log=True),
-        'min_child_weight': trial.suggest_float('min_child_weight', 1e-2, 1e2, log=True),
-        'subsample': trial.suggest_float('subsample', 0.7, 1.00, step=0.05),
-        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.7, 1.00, step=0.05)
-        # 'num_parallel_tree': optuna.distributions.IntDistribution(1, 5)
+        'n_estimators': trial.suggest_int('n_estimators', 100, 500, step=50),
+        'tree_method': trial.suggest_categorical('tree_method', ['exact', 'approx', 'hist'])
 
     }
     return train_evaluate(params)

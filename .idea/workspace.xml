@@ -5,17 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/new_datasets/test_04.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new_datasets/train_04.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studies/04.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studies/04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studies/04_seconds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_07.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_07.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/05.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/05_2.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/05_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/05_2_seconds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/05_seconds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/08.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/08.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/studies/08_seconds.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_07.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_07.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_newstart.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/04_newstart.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spaceship.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/.ipynb_checkpoints/initialize_studies-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/functions/.ipynb_checkpoints/initialize_studies-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/initialize_studies.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/functions/initialize_studies.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scores_df.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/02.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/02.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

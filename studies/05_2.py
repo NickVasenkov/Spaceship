@@ -10,7 +10,7 @@ N_TRIALS = 100
 
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
-STUDY_NAME = '02'
+STUDY_NAME = '05_2'
 
 # Import packages
 import joblib
@@ -18,13 +18,13 @@ import optuna
 import optuna.visualization as vis
 import pandas as pd
 
+# Load the dataset
+train_full = pd.read_csv('../new_datasets/train_05.csv')
+
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
 total_seconds = pd.read_csv('{}_seconds.csv'.format(STUDY_NAME), index_col=0)
 total_hours = round(total_seconds.iloc[0, 0] / 3600, 3)
-
-# Load the dataset
-train_full = pd.read_csv('../new_datasets/train_01.csv')
 
 # Load the global_variables
 global_variables = pd.read_csv('../global_variables.csv', index_col=0)
@@ -36,32 +36,33 @@ SEED = global_variables.loc[0, 'SEED']
 def train_evaluate(params):
     # Choose variables to include
 
+    accepted_features= ['RoomService', 'FoodCourt', 'ShoppingMall',
+                        'Spa', 'VRDeck', 'VIP', 'CryoSleep', 'Europa',
+                        'Mars', 'PSO J318.5-22', 'TRAPPIST-1e', 'S']
+
+    # Create the train set
+    train = train_full[accepted_features]
+
+    # Add tested features
     features = []
-    features_number = 0
     for key, value in params.items():
         if value:
             features.append(key)
-            features_number +=1
 
-    # Create the train set
-    train = train_full[features]
-    train = pd.concat([train, train_full['Transported']], axis=1)
-    print(train.head())
+    train = pd.concat([train, train_full[features],
+                       train_full['Transported']], axis=1)
 
     # UNCOMMENT TO INSTALL XGBOOST
     # !pip install xgboost
     import xgboost as xgb
 
-    # Instantiate the classifier
+    # Instantiate the regressor
     model = xgb.XGBClassifier(random_state=SEED, n_jobs=-1)
 
     # Calculate the cross-validation Score
     from functions.get_score import get_score
 
-    if features_number > 0:
-        train_score, cross_score, std, sub = get_score(global_variables, train, model=model, update=False, prepare_submission=False)
-    else:
-        cross_score = 0
+    train_score, cross_score, std, sub = get_score(global_variables, train, model=model, update=False, prepare_submission=False)
 
     return cross_score
 
@@ -71,11 +72,7 @@ def objective(trial):
     params = {
         # Variables inclusion
         'Age': trial.suggest_categorical('Age', [True, False]),
-        'RoomService': trial.suggest_categorical('RoomService', [True, False]),
-        'FoodCourt': trial.suggest_categorical('FoodCourt', [True, False]),
-        'ShoppingMall': trial.suggest_categorical('ShoppingMall', [True, False]),
-        'Spa': trial.suggest_categorical('Spa', [True, False]),
-        'VRDeck': trial.suggest_categorical('VRDeck', [True, False])
+        'GroupSize': trial.suggest_categorical('GroupSize', [True, False])
 
     }
     return train_evaluate(params)

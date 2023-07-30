@@ -2,15 +2,15 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 0
-SECONDS = 10
+MINUTES = 2
+SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
-N_TRIALS = 100
+N_TRIALS = 700
 
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
-STUDY_NAME = '02'
+STUDY_NAME = '05'
 
 # Import packages
 import joblib
@@ -18,13 +18,13 @@ import optuna
 import optuna.visualization as vis
 import pandas as pd
 
+# Load the dataset
+train_full = pd.read_csv('../new_datasets/train_05.csv')
+
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
 total_seconds = pd.read_csv('{}_seconds.csv'.format(STUDY_NAME), index_col=0)
 total_hours = round(total_seconds.iloc[0, 0] / 3600, 3)
-
-# Load the dataset
-train_full = pd.read_csv('../new_datasets/train_01.csv')
 
 # Load the global_variables
 global_variables = pd.read_csv('../global_variables.csv', index_col=0)
@@ -46,13 +46,12 @@ def train_evaluate(params):
     # Create the train set
     train = train_full[features]
     train = pd.concat([train, train_full['Transported']], axis=1)
-    print(train.head())
 
     # UNCOMMENT TO INSTALL XGBOOST
     # !pip install xgboost
     import xgboost as xgb
 
-    # Instantiate the classifier
+    # Instantiate the regressor
     model = xgb.XGBClassifier(random_state=SEED, n_jobs=-1)
 
     # Calculate the cross-validation Score
@@ -75,7 +74,15 @@ def objective(trial):
         'FoodCourt': trial.suggest_categorical('FoodCourt', [True, False]),
         'ShoppingMall': trial.suggest_categorical('ShoppingMall', [True, False]),
         'Spa': trial.suggest_categorical('Spa', [True, False]),
-        'VRDeck': trial.suggest_categorical('VRDeck', [True, False])
+        'VRDeck': trial.suggest_categorical('VRDeck', [True, False]),
+        'GroupSize': trial.suggest_categorical('GroupSize', [True, False]),
+        'VIP': trial.suggest_categorical('VIP', [True, False]),
+        'CryoSleep': trial.suggest_categorical('CryoSleep', [True, False]),
+        'Europa': trial.suggest_categorical('Europa', [True, False]),
+        'Mars': trial.suggest_categorical('Mars', [True, False]),
+        'PSO J318.5-22': trial.suggest_categorical('PSO J318.5-22', [True, False]),
+        'TRAPPIST-1e': trial.suggest_categorical('TRAPPIST-1e', [True, False]),
+        'S': trial.suggest_categorical('S', [True, False])
 
     }
     return train_evaluate(params)

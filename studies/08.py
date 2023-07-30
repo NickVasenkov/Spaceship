@@ -1,16 +1,16 @@
 ## This file can be re-run over and over to continue searching.
 
 ## CHOOSE MAXIMUM RUNNING TIME:
-HOURS = 0
-MINUTES = 0
-SECONDS = 10
+HOURS = 3
+MINUTES = 1
+SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
-N_TRIALS = 100
+N_TRIALS = 10000
 
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
-STUDY_NAME = '02'
+STUDY_NAME = '08'
 
 # Import packages
 import joblib
@@ -18,13 +18,13 @@ import optuna
 import optuna.visualization as vis
 import pandas as pd
 
+# Load the dataset
+train = pd.read_csv('../new_datasets/train_07.csv')
+
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
 total_seconds = pd.read_csv('{}_seconds.csv'.format(STUDY_NAME), index_col=0)
 total_hours = round(total_seconds.iloc[0, 0] / 3600, 3)
-
-# Load the dataset
-train_full = pd.read_csv('../new_datasets/train_01.csv')
 
 # Load the global_variables
 global_variables = pd.read_csv('../global_variables.csv', index_col=0)
@@ -34,34 +34,18 @@ SEED = global_variables.loc[0, 'SEED']
 
 # The function to maximize
 def train_evaluate(params):
-    # Choose variables to include
-
-    features = []
-    features_number = 0
-    for key, value in params.items():
-        if value:
-            features.append(key)
-            features_number +=1
-
-    # Create the train set
-    train = train_full[features]
-    train = pd.concat([train, train_full['Transported']], axis=1)
-    print(train.head())
 
     # UNCOMMENT TO INSTALL XGBOOST
     # !pip install xgboost
     import xgboost as xgb
 
     # Instantiate the classifier
-    model = xgb.XGBClassifier(random_state=SEED, n_jobs=-1)
+    model = xgb.XGBClassifier(random_state=SEED, n_jobs=-1, **params)
 
     # Calculate the cross-validation Score
     from functions.get_score import get_score
 
-    if features_number > 0:
-        train_score, cross_score, std, sub = get_score(global_variables, train, model=model, update=False, prepare_submission=False)
-    else:
-        cross_score = 0
+    train_score, cross_score, std, sub = get_score(global_variables, train, model=model, update=False, prepare_submission=False)
 
     return cross_score
 
@@ -69,13 +53,19 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        # Variables inclusion
-        'Age': trial.suggest_categorical('Age', [True, False]),
-        'RoomService': trial.suggest_categorical('RoomService', [True, False]),
-        'FoodCourt': trial.suggest_categorical('FoodCourt', [True, False]),
-        'ShoppingMall': trial.suggest_categorical('ShoppingMall', [True, False]),
-        'Spa': trial.suggest_categorical('Spa', [True, False]),
-        'VRDeck': trial.suggest_categorical('VRDeck', [True, False])
+        # 'n_estimators': trial.suggest_int(40, 100, step=20),
+        'max_depth': trial.suggest_int('max_depth', 2, 50),
+        'max_leaves': trial.suggest_int('max_leaves', 20, 500),
+        'grow_policy': trial.suggest_categorical('grow_policy', ['depthwise', 'lossguide']),
+        'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.2, step=0.01),
+        'booster': trial.suggest_categorical('booster', ['gbtree', 'dart']),
+        'tree_method': trial.suggest_categorical('tree_method', ['approx', 'hist']),
+        # We may use 'exact' method for the best params (it is slow),
+        'gamma': trial.suggest_float('gamma', 1e-2, 1e2, log=True),
+        'min_child_weight': trial.suggest_float('min_child_weight', 1e-2, 1e2, log=True),
+        'subsample': trial.suggest_float('subsample', 0.7, 1.00, step=0.05),
+        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.7, 1.00, step=0.05)
+        # 'num_parallel_tree': optuna.distributions.IntDistribution(1, 5)
 
     }
     return train_evaluate(params)

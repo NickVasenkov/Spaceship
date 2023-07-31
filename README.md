@@ -1,8 +1,8 @@
 # Spaceship
- Predict which passengers are transported to an alternate dimension.
+Approaching a Kaggle competition (binary classification).
+Predict which passengers are transported to an alternate dimension.
+Notebook: https://github.com/NickVasenkov/Spaceship/blob/main/Spaceship.ipynb
 
-This an example of data preprocessing, dimensionality reduction and binary classification with different models and hyperparameters tuning.
+This an example of data preprocessing, exploratory analysis, feature selection, hyperparameters tuning and model esembling methods.
 
-My current best approach starts here:
-
-https://github.com/NickVasenkov/Spaceship/blob/main/04_newstart.ipynb
+The competition webpage: https://www.kaggle.com/competitions/spaceship-titanic/submissions#

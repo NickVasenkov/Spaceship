@@ -42,7 +42,7 @@ def train_evaluate(params):
     import xgboost as xgb
 
     # LOAD PREVIOUS BEST PARAMETERS
-    best_params_from_08 =  {'max_depth': 40, 'max_leaves': 82, 'grow_policy': 'lossguide', 'learning_rate': 0.08, 'booster': 'gbtree', 'tree_method': 'hist', 'gamma': 4.576721508009145, 'min_child_weight': 0.3292183344037119, 'subsample': 0.7, 'colsample_bytree': 0.85}
+    best_params_from_08 =  {'max_depth': 29, 'max_leaves': 231, 'grow_policy': 'depthwise', 'learning_rate': 0.060000000000000005, 'booster': 'gbtree', 'tree_method': 'hist', 'gamma': 3.081246626879879, 'min_child_weight': 0.11169187791112256, 'subsample': 0.65, 'colsample_bytree': 0.75}
 
     # Instantiate the classifier
     model = xgb.XGBClassifier(random_state=SEED, n_jobs=N_JOBS, **best_params_from_08)

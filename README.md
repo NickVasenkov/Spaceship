@@ -1,5 +1,5 @@
 # Spaceship
-Approaching a Kaggle competition (binary classification).
+Approaching a Kaggle competition (binary classification). Top 15% solution (at 2023-08-01).
 
 Predict which passengers are transported to an alternate dimension.
 

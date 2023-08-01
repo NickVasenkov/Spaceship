@@ -23,7 +23,7 @@ import pandas as pd
 train = pd.read_csv('../new_datasets/train_07.csv', index_col=0)
 
 # CHOOSE THE NUMBER OF PROCESSORS (will be multiplied by 2)
-N_JOBS = -1
+N_JOBS = 4
 
 # Load study
 study = joblib.load("{}.pkl".format(STUDY_NAME))
@@ -42,7 +42,7 @@ def train_evaluate(params):
     import xgboost as xgb
 
     # LOAD PREVIOUS BEST PARAMETERS
-    best_params_from_08 =  {'max_depth': 29, 'max_leaves': 231, 'grow_policy': 'depthwise', 'learning_rate': 0.060000000000000005, 'booster': 'gbtree', 'tree_method': 'hist', 'gamma': 3.081246626879879, 'min_child_weight': 0.11169187791112256, 'subsample': 0.65, 'colsample_bytree': 0.75}
+    best_params_from_08 = {'max_depth': 13, 'max_leaves': 29, 'grow_policy': 'lossguide', 'learning_rate': 0.08, 'booster': 'dart', 'tree_method': 'approx', 'gamma': 1.834861192156488, 'min_child_weight': 0.02502298800121074, 'subsample': 0.8500000000000001, 'colsample_bytree': 0.9}
 
     # Instantiate the classifier
     model = xgb.XGBClassifier(random_state=SEED, n_jobs=N_JOBS, **best_params_from_08)
@@ -60,7 +60,7 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        'n_estimators': trial.suggest_int('n_estimators', 100, 500, step=50),
+        'n_estimators': trial.suggest_int('n_estimators', 50, 500, step=50),
         'tree_method': trial.suggest_categorical('tree_method', ['exact', 'approx', 'hist'])
 
     }

@@ -2,7 +2,7 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 0
+MINUTES = 40
 SECONDS = 5
 
 ## CHOOSE NUMBER OF TRIALS:
@@ -23,7 +23,7 @@ import pandas as pd
 train = pd.read_csv('../new_datasets/train_07.csv', index_col=0)
 
 # CHOOSE THE NUMBER OF PROCESSORS (will be multiplied by 2)
-N_JOBS = -1
+N_JOBS = 2
 
 features_n = len(train.columns) - 1
 

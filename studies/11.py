@@ -2,7 +2,7 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 10
+MINUTES = 2
 SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
@@ -43,7 +43,7 @@ def train_evaluate(params):
 
 
     # LOAD PREVIOUS BEST PARAMETERS
-    best_params_from_10 = {'criterion': 'log_loss', 'max_depth': 44, 'max_features': 6, 'max_leaf_nodes': 443, 'min_impurity_decrease': 1.0589275371663915e-09, 'min_samples_leaf': 3, 'ccp_alpha': 0.0010619054629917488, 'max_samples': 0.9846315931336822}
+    best_params_from_10 = {'criterion': 'log_loss', 'max_depth': 10, 'max_features': 7, 'max_leaf_nodes': 179, 'min_impurity_decrease': 0.0003401170930011726, 'min_samples_leaf': 2, 'ccp_alpha': 1.303617229320636e-05, 'max_samples': 0.8534078600487377}
 
     # Instantiate the classifier
     from sklearn.ensemble import RandomForestClassifier
@@ -64,7 +64,7 @@ def train_evaluate(params):
 # The function with the parameters ranges. The ranges can be changed.
 def objective(trial):
     params = {
-        'n_estimators': trial.suggest_int('n_estimators', 100, 500, step=50),
+        'n_estimators': trial.suggest_int('n_estimators', 40, 490, step=50),
         'criterion': trial.suggest_categorical('criterion', ['log_loss', 'gini', 'entropy']),
 
     }

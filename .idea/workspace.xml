@@ -5,16 +5,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f769a5-deb7-4f1b-bd41-dfefa87b29ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/test_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_datasets/train_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submissions/submission_25.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Spaceship-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spaceship.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/initialize_studies.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/functions/initialize_studies.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_datasets/test_07.csv" beforeDir="false" afterPath="$PROJECT_DIR$/new_datasets/test_07.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_datasets/train_07.csv" beforeDir="false" afterPath="$PROJECT_DIR$/new_datasets/train_07.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scores_df.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/05.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/05.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/05.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/05.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/05_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/05_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/05_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/05_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/05_2_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/05_2_seconds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/05_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/05_seconds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/08.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/08.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/08.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/08.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/08_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/08_seconds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/09.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/09.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/09.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/09.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/09_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/09_seconds.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studies/10.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/10.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/10.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/10.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studies/10_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/10_seconds.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studies/11.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/11.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/11.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/11.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studies/11_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/11_seconds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/12.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/studies/12.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/12.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/12.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/12_seconds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/studies/12_seconds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_05.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_05.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_06.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_06.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_07.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_07.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_08.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_08.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_09.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_09.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/submissions/submission_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_12.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_12.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submissions/submission_17.csv" beforeDir="false" afterPath="$PROJECT_DIR$/submissions/submission_17.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

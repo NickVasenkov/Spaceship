@@ -2,11 +2,11 @@
 
 ## CHOOSE MAXIMUM RUNNING TIME:
 HOURS = 0
-MINUTES = 2
+MINUTES = 1
 SECONDS = 0
 
 ## CHOOSE NUMBER OF TRIALS:
-N_TRIALS = 700
+N_TRIALS = 10000
 
 RUNNING_TIME = HOURS * 3600 + MINUTES * 60 + SECONDS
 
@@ -47,6 +47,8 @@ def train_evaluate(params):
     train = train_full[features]
     train = pd.concat([train, train_full['Transported']], axis=1)
 
+    print(features_number)
+
     # UNCOMMENT TO INSTALL XGBOOST
     # !pip install xgboost
     import xgboost as xgb
@@ -76,8 +78,10 @@ def objective(trial):
         'Spa': trial.suggest_categorical('Spa', [True, False]),
         'VRDeck': trial.suggest_categorical('VRDeck', [True, False]),
         'GroupSize': trial.suggest_categorical('GroupSize', [True, False]),
+        'FamilySize': trial.suggest_categorical('FamilySize', [True, False]),
         'VIP': trial.suggest_categorical('VIP', [True, False]),
         'CryoSleep': trial.suggest_categorical('CryoSleep', [True, False]),
+        'Deck_enc': trial.suggest_categorical('Deck_enc', [True, False]),
         'Europa': trial.suggest_categorical('Europa', [True, False]),
         'Mars': trial.suggest_categorical('Mars', [True, False]),
         'PSO J318.5-22': trial.suggest_categorical('PSO J318.5-22', [True, False]),

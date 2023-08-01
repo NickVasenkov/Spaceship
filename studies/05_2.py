@@ -36,9 +36,11 @@ SEED = global_variables.loc[0, 'SEED']
 def train_evaluate(params):
     # Choose variables to include
 
-    accepted_features= ['RoomService', 'FoodCourt', 'ShoppingMall',
-                        'Spa', 'VRDeck', 'VIP', 'CryoSleep', 'Europa',
+    accepted_features= ['Age', 'RoomService', 'FoodCourt', 'ShoppingMall',
+                        'Spa', 'VRDeck',
+                              'CryoSleep', 'Deck_enc',
                         'Mars', 'PSO J318.5-22', 'TRAPPIST-1e', 'S']
+
 
     # Create the train set
     train = train_full[accepted_features]
@@ -51,6 +53,8 @@ def train_evaluate(params):
 
     train = pd.concat([train, train_full[features],
                        train_full['Transported']], axis=1)
+
+    print(train.shape)
 
     # UNCOMMENT TO INSTALL XGBOOST
     # !pip install xgboost
@@ -71,9 +75,10 @@ def train_evaluate(params):
 def objective(trial):
     params = {
         # Variables inclusion
-        'Age': trial.suggest_categorical('Age', [True, False]),
-        'GroupSize': trial.suggest_categorical('GroupSize', [True, False])
-
+        'GroupSize': trial.suggest_categorical('GroupSize', [True, False]),
+        'FamilySize': trial.suggest_categorical('FamilySize', [True, False]),
+        'VIP': trial.suggest_categorical('VIP', [True, False]),
+        'Europa': trial.suggest_categorical('Europa', [True, False])
     }
     return train_evaluate(params)
 
